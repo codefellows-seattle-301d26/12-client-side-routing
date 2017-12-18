@@ -21,6 +21,16 @@ Complete [today's Kata](https://www.codewars.com/kata/highest-scoring-word) and 
 
 ## Configuration
 
+- `ENV VARS` - Paste the following commands into your terminal window for testing locally.
+  * _Note: these will be temporary while the current shell session (window) is open._
+
+```
+export PORT=3000
+export CLIENT_URL=http://localhost:8080
+Mac:     export DATABASE_URL=postgres://localhost:5432/books_app
+Windows: export DATABASE_URL=postgres://USER:PASSWORD@localhost:5432/books_app
+```
+
 ```sh
 book_app_week_3
 ├── book-list-client
@@ -73,6 +83,7 @@ Add functionality to the book list application for viewing a single book's detai
 
 - Add an endpoint for a `GET` request to `/api/v1/books/:id`.
   - This should allow the client to make a request for a singular book, which returns the details of that record from the DB.
+    - Note: you will not be able to manually enter a book id into the address bar of your browser. 
 - Create a new static method to interact with your Book model, such as `fetchOne`.
 - Create a Detail View container in index.html to display the detail view of a single book.
 
